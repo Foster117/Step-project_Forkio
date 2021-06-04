@@ -1,0 +1,180 @@
+.subscription-pricing-section{
+    background-color: rgb(74, 59, 78);
+    background-image: url(../img/section-subscription-pricing.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 14px;
+
+    @media(min-width: 630px) {
+        padding-top: 88px;
+    }
+    @media(min-width: 1130px) {
+        padding-top: 112px;
+    }
+
+    &__section-header{
+        font-family: $font-primary;
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 42px;
+
+        @media(min-width: 630px) {
+            font-size: 42px;
+            line-height: 44px;
+        }
+        @media(min-width: 1130px) {
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+}
+.packages-container {
+    margin: 32px auto 18px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 18px;
+    
+        @media(min-width: 630px){
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            row-gap: 30px;
+            column-gap: 25px;
+            margin: 39px auto 0;
+        }
+        @media(min-width: 1130px){
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(1, auto);
+            column-gap: 15px;
+            margin: 0 auto;
+        }
+    }
+.package-item {
+    background-color: rgba(255, 255, 255, 0.11);
+    margin-left: 20px;
+    text-align: center;
+    width: 257px;
+    height: 457px;
+    font-weight: 400;
+    font-family: $font-primary;
+    color: white;
+    position: relative;
+
+    &:first-child {
+        @media(min-width: 630px){
+            margin-left: 40px;
+        }
+        @media(min-width: 1130px){
+            margin-left: 0px;
+        }
+    }
+    &:last-child {
+        @media(min-width: 630px){
+            margin-top: 50px;
+        }
+        @media(min-width: 1130px){
+            margin-top: 112px;
+        }
+    }
+
+    @media(min-width: 630px){
+        margin-left: 0px;
+    }
+    @media(min-width: 1130px){
+        margin-top: 112px;
+    }
+
+    &__title {
+        background-color: rgba(255, 255, 255, 0.06);
+        padding: 36px 0px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &__price {
+        padding: 30px 0px 20px;
+        font-size: 60px;
+        line-height: 62px;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    &__line{
+        width: 60px;
+        height: 5px;
+        background-color: $line-color-section-subscription-pricing;
+        margin: 38px auto 30px;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    &__button {
+        padding: 15px 37px;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: $btn-text-color;
+        font-size: 15px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: absolute;
+        bottom: 37px;
+        right: 47px;
+    }
+}
+.package-item-highlighted {
+    background-color: rgba(70, 48, 72, 0.84);
+    text-align: center;
+    width: 299px;
+    font-weight: 400;
+    font-family: $font-primary;
+    color: white;
+
+    @media(min-width: 630px){
+        margin-bottom: 94px;
+    }
+    @media(min-width: 1130px){
+        margin-top: 61px;
+    }
+
+    &__title {
+        background-color:rgba(0, 0, 0, 0.11);
+        padding: 43px 0px;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &__price {
+        padding: 30px 0px 20px;
+        font-size: 82px;
+        line-height: 84px;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    &__line{
+        width: 60px;
+        height: 5px;
+        background-color: $line-color-section-subscription-pricing;
+        margin: 38px auto 30px;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 28px;;
+    }
+    &__button {
+        margin: 83px 44px 47px;
+        padding: 15px 37px;
+        color: $btn-text-color;
+        background-color: rgba(255, 255, 255, 0.15);
+        font-size: 15px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

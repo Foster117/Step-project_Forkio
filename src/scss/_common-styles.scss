@@ -1,0 +1,33 @@
+.content-container{
+    box-sizing: border-box;
+    min-width: $content-min-width;
+    width: 100%;
+    padding: 0 10px 0 10px;
+
+    @media (min-width: $resolution-high) {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+
+    &--flex{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+}
+
+.btn{
+    color: $btn-text-color;
+    background-color: $btn-back-color;
+    font-weight: 700;
+    font-family: $font-primary;
+    border-radius: 40px;
+    transition: color $transition-length, background-color $transition-length;
+    cursor: pointer;
+
+    &:hover{
+        box-sizing: border-box;
+        color: $btn-text-color-hover;
+        background-color: $btn-back-color-hover;
+    }
+}

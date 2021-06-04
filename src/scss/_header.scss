@@ -1,0 +1,214 @@
+.header{
+    background-color: #27262A;
+
+    @media (min-width: $resolution-high){
+        background-color: rgb(1,0,5);
+    }
+}
+
+.navbar{
+    height: 100px;
+    @include flex(space-between, center);
+    padding: 0 5px 0 5px;
+    position: relative;
+
+    @media (min-width: $resolution-medium){
+        height: 120px;
+        padding-top: 7px;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: $resolution-high){
+        height: 120px;
+        padding-top: 14px;
+        justify-content: right;
+    }
+}
+
+.logo-container{
+    display: flex;
+    align-items: flex-end;
+    order: 0;
+
+    &__logo-text{
+        display: none;
+        font-family: $font-primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 24px;
+        color: $color-menu-hi-res;
+        margin-bottom: 5px;
+        transition: $transition-length;
+        
+        @media (min-width: $resolution-low){
+            display: block;
+            margin-left: 15px;
+        }
+    }
+
+    &__svg{
+        width: 43px;
+        height: 41px;
+    }
+    &__svg-path{
+        fill: $color-menu-hi-res;
+        transition: $transition-length;
+    }
+    &__menu-btn{
+        width: 30px;
+        height: 30px;
+    }
+
+    @media (min-width: $resolution-high){
+        order: 0;
+        margin-right: auto;
+    }
+
+    &:hover{
+        .logo-container__svg-path{
+            fill: $color-menu-hi-res-hover;
+        }
+        .logo-container__logo-text{
+            color: $color-menu-hi-res-hover;
+        }
+    }
+}
+
+.menu-btn{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+
+    @media (min-width: $resolution-medium){
+        display:none;
+    }
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top:100px;
+    width: 290px;
+    background-color:#333333;
+    z-index: 2;
+
+    &.menu--active{
+        display: block;
+
+        @media (min-width: $resolution-medium){
+            display: flex;
+        }
+    }
+
+    &__menu-item{
+        height: 87px;
+        border-bottom: 3px solid #3B3B3B;
+        position: relative;
+
+        &--active::before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 53px;
+            background-color: $color-menu-hi-res;
+            position: absolute;
+            left: 2px;
+            top: 19px;
+
+            @media (min-width: $resolution-medium){
+                display: none;
+            }
+        }
+
+        @media (min-width: $resolution-medium){
+            height: auto;
+            border: none;
+        }
+    }
+
+    &__menu-item-link{
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        color: $color-menu-low-res;
+        font-size: 26px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 35px 0 0 39px;
+        transition: $transition-length;
+
+        &:hover{
+            color: $color-menu-low-res-hover;
+        }
+
+        @media (min-width: $resolution-medium){
+            width: auto;
+            height: auto;
+            padding: 0;
+            color: $color-menu-hi-res;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 11px 0 11px;
+
+            &:hover{
+                color: $color-menu-hi-res-hover;
+            }
+        }
+
+        @media (min-width: 585px){
+            margin: 0 24px 0 24px;
+        }
+    }
+
+    @media (min-width: $resolution-medium){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        position: static;
+        background-color: transparent;
+        display: flex;
+        order: 2;
+    }
+    @media (min-width: $resolution-high){
+        order: 1;
+        width: auto;
+    }
+}
+
+.menu-close-background{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    @media (min-width: $resolution-medium){
+        display: none;    
+    }
+}
+
+.btn-buy-now{
+    border: 1px solid $btn-back-color;
+    font-size: 15px;
+    height: 37px;
+    padding: 0 25px 0 25px;
+
+    &:hover{
+        border: 1px solid $btn-back-color;
+    }
+
+    @media (min-width: $resolution-medium){
+        order: 1;
+        font-size: 16px;
+        padding: 0 37px 0 37px;
+    }
+    @media (min-width: $resolution-high){
+        order: 2;
+        margin-left: 24px;
+    }
+}

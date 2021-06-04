@@ -1,0 +1,65 @@
+.fapp-section{
+    height: 570px;
+    background-color: rgb(1,0,5);
+    background-image: url(../img/fork-app/fork-app-background.jpg);
+    background-position: right 50% bottom 25%;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+
+    @media(min-width: $resolution-medium){
+        padding-top: 65px;
+        height: 590px;
+        background-position: right 50% bottom 5%;
+    }
+    @media(min-width: $resolution-high){
+        padding-top: 55px;
+        background-position: right 50% bottom 10%;
+    }
+
+    &__header{
+        color: white;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 48px;
+        text-align: center;
+
+        @media(min-width: $resolution-medium){
+            font-size: 72px;
+        }
+        @media(min-width: $resolution-high){
+            font-size: 82px;
+        }
+    }
+
+    &__description{
+        color: #8D81AC;
+        font-family: $font-primary;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        text-transform: capitalize;
+        line-height: 24px;
+
+        @media(min-width: $resolution-medium){
+            font-family: $font-secondary;
+            font-size: 24px;
+            text-transform: none;
+        }
+        @media(min-width: $resolution-high){
+            font-size: 30px;
+        }
+    }
+
+    &__version{
+        color: $color-text-content;
+        font-family: $font-primary;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+
+        @media(min-width: $resolution-high){
+            font-size: 16px;
+        }
+    }
+}
